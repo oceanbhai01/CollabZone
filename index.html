@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CollabZone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to CollabZone</h1>
+        <p>Select your platform to continue:</p>
+        <div class="buttons">
+            <button onclick="selectPlatform('YouTube')">YouTube</button>
+            <button onclick="selectPlatform('Instagram')">Instagram</button>
+        </div>
+        <form id="collabForm" style="display:none;" onsubmit="submitForm(event)">
+            <input type="hidden" id="platform" name="platform">
+            <input type="text" name="channelName" placeholder="Channel/Page Name" required>
+            <input type="number" name="followers" placeholder="Subscribers/Followers" required>
+            <input type="text" name="price" placeholder="Promotion Price (in ₹)" required>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="response"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
